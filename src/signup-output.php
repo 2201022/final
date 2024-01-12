@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="css/frame22.css">
     <link rel="stylesheet" href="css/frame7.css">
 
-    <?php include './header.php'; ?>
-    <?php include './db-connect.php'; ?>
+    <?php require './header.php'; ?>
+    <?php require './db-connect.php'; ?>
 
     <?php
-    unset($_SESSION['Users']);
+    $pdo = new PDO($connect, USER, PASS);
     if(isset($_POST['name']) && isset($_POST['password'])){
-        $pdo = new PDO($connect, USER, PASS);
         $sql = $pdo->prepare("insert into Users values(null, ?, ?)");
         $sql->execute([$_POST['name'], $_POST['password']]);
     }else{
@@ -23,4 +22,4 @@
     }
     ?>
 
-    <?php include './footer.php'; ?>
+    <?php require './footer.php'; ?>
