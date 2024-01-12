@@ -12,41 +12,14 @@
 
     <?php
     unset($_SESSION['Users']);
-    try {
+    if(isset($_POST['name']) && isset($_POST['password'])){
         $pdo = new PDO($connect, USER, PASS);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->beginTransaction();
-
-        $name = $_POST['name'];
-        $pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-        $insertSql = $pdo->prepare("insert into Users values(null, ?, ?)");
-        $insertSql->execute([$name, $pass]);
-
-        echo '<div class="div7 container-fluid">';
-        echo '<p class="row justify-content-center">お客様情報を登録しました。</p>';
-        echo '<a href="./alcoholQue.php">';
-        echo 'トップページへ';
-        echo '</a></div>';
-
-        $userId = $pdo->lastInsertId();
-
-        $selectSql = $pdo->prepare("select * from user where id = ?");
-        $selectSql->execute([$userId]);
-
-        foreach ($selectSql as $row) {
-            $_SESSION['Users'] = [
-                'user_id' => $row['user_id'], 'user_name' => $row['user_name'], 'password' => $row['password']
-            ];
-        }
-
-        $pdo->commit();
-    } catch (PDOException $e) {
-        $pdo->rollBack();
-        echo '<div class="container-fluid">';
-        echo '<p class="row justify-content-center">エラーが発生しました。</p>';
-        echo '<p class="row justify-content-center">', $e->getMessage(), '</p>';
-        echo '</div>';
+        $sql = $pdo->prepare("insert into Users values(null, ?, ?)");
+        $sql->execute([$_POST['name'], $_POST['password']]);
+    }else{
+        echo '<p>登録された内容に不備があります。</p>';
+        echo '<p>登録をやりなおしてください。</p>';
+        echo '<a href="signup-input.php">新規登録へ</a>';
     }
     ?>
 
