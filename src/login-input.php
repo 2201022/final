@@ -20,7 +20,7 @@
             echo '</table>';
             echo '<div class="submit" onclick="send()">ログイン</div>';
             echo '</form>';
-            echo '<p class="info">アカウントがない方は<a href="signup.php">こちら</a></p>';
+            echo '<p class="info">アカウントがない方は<a href="signup-input.php">こちら</a></p>';
             echo '<script src="./js/login.js"></script>';
         ?>
     </body>
