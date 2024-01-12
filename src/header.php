@@ -19,7 +19,7 @@
 				<div class="navbar-nav">
 					<a class="nav-link active" aria-current="page" href="toppage.php">TOP</a>
 					<a class="nav-link" aria-current="page" href="logout-input.php">ログイン/ログアウト</a>
-					<a class="nav-link" aria-current="page" href="cart.php">達成履歴</a>
+					<a class="nav-link" aria-current="page" href="todoClear.php">達成履歴</a>
 					<a class="nav-link" aria-current="page" href="mypage.php">マイページ</a>
 				</div>
 			</div>
