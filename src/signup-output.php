@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="css/frame22.css">
     <link rel="stylesheet" href="css/frame7.css">
 
-    <?php require './header.php'; ?>
-    <?php require './db-connect.php'; ?>
+    <?php require 'header.php'; ?>
+    <?php require 'db-connect.php'; ?>
 
     <?php
     $pdo = new PDO($connect, USER, PASS);
     if(isset($_POST['name']) && isset($_POST['password'])){
         $sql = $pdo->prepare("insert into Users values(null, ?, ?)");
         $sql->execute([$_POST['name'], $_POST['password']]);
+        echo '<p>登録が完了しました</p>';
+        echo '<a href="toppage.php">トップページへ</a>';
     }else{
         echo '<p>登録された内容に不備があります。</p>';
         echo '<p>登録をやりなおしてください。</p>';
