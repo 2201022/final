@@ -2,7 +2,7 @@
 <?php
     if(isset($_SESSION['user'])){
         echo '<link rel="stylesheet" href="css/logout-input.css">';
-        require 'header.php';
+        require './header.php';
         echo '<p>ログアウトしますか？</p>';
         echo '<a class="logout" href="logout-output.php">ログアウト</a>';
         require 'footer.php';
