@@ -6,7 +6,7 @@
 <head>
     <link rel="stylesheet" href="css/todo.css">
 
-    <?php require './header.php'; ?>
+    <?php require './header2.php'; ?>
     <?php require './db-connect.php'; ?>
 
     <?php

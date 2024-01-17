@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/signup.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <?php include './header.php' ?>
+    <?php include './header2.php' ?>
     <p class="title">新規登録</p>
     <p class="info">※すべて必須項目です</p>
     <?php
