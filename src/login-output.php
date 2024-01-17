@@ -4,7 +4,7 @@
 <html lang="ja">
 
 <head>
-    <link rel="stylesheet" href="css/logout-input.css">
+    <link rel="stylesheet" href="css/todo.css">
     <?php require 'header.php'; ?>
     <?php require 'db-connect.php'; ?>
     <?php
@@ -30,13 +30,13 @@
         if (isset($_SESSION['user'])) {
             echo '<div class="div7 container-fluid">';
             echo '<p class="row justify-content-center">ログインしました。</p>';
-            echo '<a href="./toppage.php" class="logout">';
-            echo 'TOPページへ';
+            echo '<a href="./toppage.php" class="locate">';
+            echo 'トップページへ';
             echo '</a></div>';
         } else {
             echo '<div class="div7 container-fluid">';
             echo '<p class="row justify-content-center">ニックネームまたはパスワードが違います。</p>';
-            echo '<a href="./login-input.php" class="logout">';
+            echo '<a href="./login-input.php" class="locate">';
             echo '戻る';
             echo '</a></div>';
         }

@@ -10,7 +10,7 @@
             $nickname = $password = '';
             echo '<form action="./login-output.php" method="post" name="loginForm">';
             echo '<table class="table">';
-            echo '<tr><td class="subtitle">ニックネーム：</td><td>';
+            echo '<tr><td class="subtitle">ユーザーネーム：</td><td>';
             echo '<input type="text" class="input" name="nickname" id="name" value="', $nickname, '">';
             echo '</td></tr>';
             echo '<tr><td class="subtitle">パスワード：</td><td>';

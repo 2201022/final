@@ -5,10 +5,57 @@
 .th{
     text-align: center;
     background-color: darkgrey !important;
+    width: 80px;
+}
+.thbig{
+    text-align: center;
+    background-color: darkgrey !important;
 }
 .td {
     text-align: center;
     vertical-align: middle;
+}
+.td1 {
+    display: block;
+    width: 60px;
+    padding: 3px 0;
+    margin: auto;
+    background: green;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.td1:hover{
+    background-color: darkgreen;
+    color: white;
+}
+.td2 {
+    display: block;
+    width: 60px;
+    padding: 3px 0;
+    margin: auto;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.td2:hover{
+    background-color: darkgoldenrod;
+    color: white;
+}
+.td3 {
+    display: block;
+    width: 60px;
+    padding: 3px 0;
+    margin: auto;
+    background: red;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.td3:hover{
+    background-color: darkred;
+    color: white;
 }
 .div {
     margin-bottom: 4rem;

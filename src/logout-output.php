@@ -3,7 +3,7 @@
 <html lang="ja">
 
 <head>
-    <link rel="stylesheet" href="css/logout-input.css">
+    <link rel="stylesheet" href="css/todo.css">
     <?php require 'header.php'; ?>
 
     <?php
